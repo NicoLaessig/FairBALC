@@ -1,0 +1,24 @@
+dataset,model,error_type,error_msg
+communities,FairBALC,<class 'KeyError'>,'FairBALC'
+communities,PRISM-T,<class 'NameError'>,name 'pred' is not defined
+communities,FairWassersteinBarycenter,<class 'NameError'>,name 'pred' is not defined
+communities,FairWASP,<class 'NameError'>,name 'pred' is not defined
+communities,PseudoBarycenter,<class 'NameError'>,name 'pred' is not defined
+communities,Reweighing,<class 'NameError'>,name 'pred' is not defined
+communities,LFR,<class 'NameError'>,name 'pred' is not defined
+communities,LTDD,<class 'NameError'>,name 'pred' is not defined
+communities,Fair-SMOTE,<class 'NameError'>,name 'pred' is not defined
+communities,RejectOptionClassification,<class 'NameError'>,name 'pred' is not defined
+communities,EqOddsPostprocessing,<class 'NameError'>,name 'pred' is not defined
+communities,AdaFair,<class 'NameError'>,name 'pred' is not defined
+communities,FairBoost,<class 'NameError'>,name 'pred' is not defined
+communities,FAGTB,<class 'NameError'>,name 'pred' is not defined
+communities,FRoC,<class 'KeyError'>,'FRoC'
+communities,Massaging,<class 'NameError'>,name 'pred' is not defined
+communities,FairRR,<class 'NameError'>,name 'pred' is not defined
+communities,FALCC,<class 'NameError'>,name 'pred' is not defined
+communities,FairBALC,<class 'KeyError'>,'FairBALC'
+communities,PRISM-T,<class 'NameError'>,name 'pred' is not defined
+communities,FRoC,<class 'KeyError'>,'FRoC'
+communities,FairBALC,<class 'KeyError'>,'FairBALC'
+communities,FRoC,<class 'KeyError'>,'FRoC'

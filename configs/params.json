@@ -1,0 +1,142 @@
+{
+	"LFR": {
+		"default": {
+			"Ax": 0.01,
+			"Ay": 1,
+			"Az": 50,
+			"k": 5,
+			"transform": "False"
+		},
+		"tuning": {
+			"Ax": [0.01],
+			"Ay": [0.1, 0.5, 1, 5, 10],
+			"Az": [0.1, 0.5, 1, 5, 10],
+			"k": [5],
+			"transform": ["False", "True"]
+		}
+	},
+
+
+	"Reweighing": {
+		"default": {
+			"classifier": "LogisticRegression"
+
+		},
+		"tuning": {
+			"classifier": ["LogisticRegression", "RandomForest", "GradientBoosting", "XGBoost", "DecisionTree", "LGBM"]
+		}
+	},
+
+
+	"EqOddsPostprocessing": {
+		"default": {
+
+		},
+		"tuning": {
+
+		}
+	},
+
+
+	"RejectOptionClassification": {
+		"default": {
+			"eps": 0.05
+
+		},
+		"tuning": {
+			"eps": [0.1, 0.01, 0.05, 0.001]
+		}
+	},
+
+
+	"AdaFair": {
+		"default": {
+			"estimators": 200,
+			"c": 1,
+			"CSB": "CSB1"
+		},
+		"tuning": {
+			"estimators": [20, 50, 200],
+			"c": [0.0, 0.25, 0.5, 0.75, 1.0],
+			"CSB": ["CSB1", "CSB2"]
+		}
+	},
+
+
+	"FAGTB": {
+		"default": {
+			"estimators": 300,
+			"learning_rate": 0.01,
+			"lam": 0.15
+		},
+		"tuning": {
+			"estimators": [300],
+			"learning_rate": [0.01, 0.1, 0.8, 1],
+			"lam": [0, 0.06, 0.15, 0.5]
+		}
+	},
+
+
+	"FairBoost": {
+		"default": {
+			"estimators": 100,
+			"eps": 0.1,
+			"k": 25
+		},
+		"tuning": {
+			"estimators": [10, 20, 100],
+			"eps": [0.001, 0.005, 0.01, 0.02, 0.05, 0.07, 0.1, 0.2],
+			"k": [25]
+		}
+	},
+
+
+	"FALCC": {
+		"default": {
+			"lam": 0.5,
+			"training": "opt_adaboost",
+			"proxy": "reweigh",
+			"sbt": "False",
+			"ccr": "[10,10]"
+		},
+		"tuning": {
+			"lam": [0.5],
+			"traning": ["opt_adaboost"],
+			"proxy": ["reweigh", "no"],
+			"sbt": ["False"],
+			"ccr": ["[5,5]", "[10,10]", "[15,15]", "[20,20]", "[3,3]"]
+		}
+	},
+
+
+	"FairBALC": {
+		"default": {
+			"training": "DiversePool",
+			"proxy": "shfd",
+			"ccr": "[10,10]",
+			"bal": "-",
+			"eval_strategy": "-",
+			"lam": 0.5,
+			"ensembling_strategy": "weighted_vote"
+		},
+		"tuning": {
+			"training": ["DiversePool"],
+			"proxy": ["shfd"],
+			"ccr": ["[5,5]", "[10,10]", "[15,15]", "[20,20]", "[3,3]"],
+			"bal": ["-"],
+			"eval_strategy": ["-"],
+			"lam": [0.5],
+			"ensembling_strategy": ["weighted_vote"]
+		}
+	},
+	
+
+	"LogisticRegression": {
+		"default": {
+			"remove": "False"
+		},
+		"tuning": {
+			"remove": ["False", "True"]
+		}
+	}
+}
